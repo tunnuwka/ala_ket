@@ -45,6 +45,8 @@ INSTALLED_APPS = [
     'django_cleanup.apps.CleanupConfig',
     'django_filters',
     'cafes',
+    'corsheaders',
+
 
 
 
@@ -55,6 +57,7 @@ MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
@@ -160,3 +163,5 @@ try:
     from .local_settings import * 
 except ImportError: 
     pass 
+
+CORS_ALLOW_ALL_ORIGINS=True
