@@ -3,3 +3,4 @@ db.sqlite3
 myvenv/
 static/
 media/
+ala_ket/local_settings.py 
