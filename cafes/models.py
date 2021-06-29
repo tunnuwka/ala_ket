@@ -28,7 +28,6 @@ class Cafe(models.Model):
         return self.cafe
 
 
-
 class Announcement(models.Model):
     cafe = models.ForeignKey('cafes.Cafe', models.CASCADE, related_name='announcement_cafe', null=True)
     news = models.CharField('Новости', max_length=255)

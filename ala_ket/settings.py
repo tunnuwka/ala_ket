@@ -46,11 +46,6 @@ INSTALLED_APPS = [
     'django_filters',
     'cafes',
     'corsheaders',
-
-
-
-
-    
 ]
 
 MIDDLEWARE = [
@@ -164,4 +159,4 @@ try:
 except ImportError: 
     pass 
 
-CORS_ALLOW_ALL_ORIGINS=True
+CORS_ALLOW_ALL_ORIGINS=False

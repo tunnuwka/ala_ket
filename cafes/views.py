@@ -16,17 +16,20 @@ class CafeView(ModelViewSet):
     lookup_field = 'pk'
     permission_classes = (IsAdminUserClubCreate, )
 
+
 class AnnouncementView(ModelViewSet):
     queryset = Announcement.objects.all()
     serializer_class = AnnouncementSerializer
     lookup_field = 'pk'
     permission_classes = (IsAdminOrCreateClub, )
 
+
 class FranshizaCafeView(ModelViewSet):
     queryset = FranshizaCafe.objects.all()
     serializer_class = FranshizaCafeSerializer
     lookup_field = 'pk'
     permission_classes = (IsAdminOrCreateClub, )
+
 
 class CommentView(ModelViewSet):
     queryset = Comment.objects.prefetch_related('announcements_comments')
